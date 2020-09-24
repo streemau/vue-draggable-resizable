@@ -701,7 +701,7 @@ export default {
     changeWidth (val) {
       const [newWidth, _] = snapToGrid(this.grid, val, 0, this.scale)
 
-      let right = restrictToBounds(
+      const right = restrictToBounds(
         (this.parentWidth - newWidth - this.left),
         this.bounds.minRight,
         this.bounds.maxRight
@@ -723,7 +723,7 @@ export default {
     changeHeight (val) {
       const [_, newHeight] = snapToGrid(this.grid, 0, val, this.scale)
 
-      let bottom = restrictToBounds(
+      const bottom = restrictToBounds(
         (this.parentHeight - newHeight - this.top),
         this.bounds.minBottom,
         this.bounds.maxBottom
